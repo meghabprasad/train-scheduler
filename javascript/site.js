@@ -57,13 +57,14 @@ $("#add-train-btn").on("click", function(event){
     nextTrain = moment().add(tMinutesTillTrain, "minutes");
     console.log("ARRIVAL TIME: " + moment(nextTrain).format("hh:mm"));
 
-
+    nextTrainConverted = moment(nextTrain).format("hh:mm");
+    
     database.ref().push({
         trainNameF: trainName,
         destinationF: destination,
         timeF: time,
         frequencyF: frequency,
-        nextTrainF: nextTrain,
+        nextTrainF: nextTrainConverted,
         tMinutesTillTrainF: tMinutesTillTrain
     });
 })
