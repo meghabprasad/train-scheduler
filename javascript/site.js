@@ -20,6 +20,7 @@ var firebaseConfig = {
   var tMinutesTillTrain = "";
   
 
+
 $("#add-train-btn").on("click", function(event){
     event.preventDefault();
     trainName = $("#train-name-input").val().trim();
